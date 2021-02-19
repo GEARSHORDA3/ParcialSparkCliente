@@ -24,6 +24,7 @@ public class SparkWebApp {
             String data = httpConnectService.getData(number,word);
             return data ;
         });
+
     }
 
     /*
