@@ -1,7 +1,7 @@
 package arep;
 
-import arep.model.Calculation;
-import com.google.gson.Gson;
+import arep.Connection.HttpConnectServices;
+import com.google.gson.JsonObject;
 
 
 import java.io.IOException;
@@ -18,11 +18,11 @@ public class SparkWebApp {
         get("/data", (request, response) ->{
             response.status(200);
             response.type("application/json");
+            HttpConnectServices httpConnectService = new HttpConnectServices();
             String number = request.queryParams("number");
             String word = request.queryParams("operation");
-            Calculation calculateValue = new Calculation();
-            double value = calculateValue.calculate(number,word);
-            return new Gson().toJson("{\"respuesta\": \""+value+"\"}") ;
+            String data = httpConnectService.getData(number,word);
+            return data ;
         });
     }
 
