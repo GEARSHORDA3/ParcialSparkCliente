@@ -73,6 +73,22 @@ mvn javadoc:javadoc
 http://localhost:4569/data?number={number}&operation={operation}
 ```
 
+7. Para ejecutar el cliente, es mediante los siguientes comandos:
+
+Windows
+
+```
+java -cp target/classes;target/dependency/* arep.JavaClient
+
+```
+
+Linux
+
+```
+java $JAVA_OPTS -cp target/classes:target/dependency/* arep.JavaClient
+
+```
+
 ## Construcción
 
 * [Maven](https://maven.apache.org/)
