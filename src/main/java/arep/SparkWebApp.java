@@ -11,7 +11,7 @@ import static spark.Spark.*;
 public class SparkWebApp {
 
     /**
-     * Use method get to redirect to index.html and post to receive values from .js and return values in format Json
+     * Use method get to redirect response  http and post to receive values from .js and return values in format Json
      */
     public static void main(String[] args) throws IOException {
         port(getPort());
